@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{EC2BF9F2-7F68-4857-BD68-B3D096404427}|Default">
+  <MonoDevelop.Ide.ItemProperties.csharp-appium-app-browserstack PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="csharp-appium-app-browserstack/Program.cs">
+    <Files>
+      <File FileName="csharp-appium-app-browserstack/Program.cs" Line="10" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
