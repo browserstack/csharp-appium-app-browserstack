@@ -25,7 +25,7 @@ namespace BrowserStackAppiumSingleTest
             caps.SetCapability("automationName", "XCUITest");
             caps.SetCapability("device", "iPhone 7");
             caps.SetCapability("app", "bs://<hashed app-id>");
-            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement> (new Uri("http://hub.browserstack.com/wd/hub"), caps);
+            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement> (new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
             IOSElement loginButton = (IOSElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Log In"))

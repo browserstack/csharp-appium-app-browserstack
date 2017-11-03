@@ -36,7 +36,7 @@ namespace BrowserStackAppiumLocalTest
             caps.SetCapability("browserstack.local", true);
             caps.SetCapability("app", "bs://<hashed app-id>");
 
-            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new Uri("http://hub.browserstack.com/wd/hub"), caps);
+            IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
             IOSElement testButton = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("TestBrowserStackLocal"))

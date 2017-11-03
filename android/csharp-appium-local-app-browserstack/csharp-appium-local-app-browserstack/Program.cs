@@ -35,7 +35,7 @@ namespace BrowserStackAppiumLocalTest
             caps.SetCapability("browserstack.local", true);
             caps.SetCapability("app", "bs://<hashed app-id>");
 
-            AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new Uri("http://hub.browserstack.com/wd/hub"), caps);
+            AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
             AndroidElement searchElement = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 ExpectedConditions.ElementToBeClickable(MobileBy.Id("com.example.android.basicnetworking:id/test_action"))
