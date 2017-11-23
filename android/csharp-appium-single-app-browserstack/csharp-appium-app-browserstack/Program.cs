@@ -11,8 +11,8 @@ namespace BrowserStackAppiumSingleTest
     class MainClass
     {
 
-        readonly static string userName = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
-        readonly static string accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
+        readonly static string userName = "BROWSERSTACK_USERNAME";
+        readonly static string accessKey = "BROWSERSTACK_ACCESS_KEY";
 
 
         public static void Main(string[] args)
@@ -21,7 +21,6 @@ namespace BrowserStackAppiumSingleTest
             caps.SetCapability("browserstack.user", userName);
             caps.SetCapability("browserstack.key", accessKey);
 
-            caps.SetCapability("realMobile", true);
             caps.SetCapability("device", "Google Pixel");
             caps.SetCapability("app", "bs://<hashed app-id>");
 
