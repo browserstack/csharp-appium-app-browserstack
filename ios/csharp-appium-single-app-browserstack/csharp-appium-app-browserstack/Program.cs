@@ -11,8 +11,8 @@ namespace BrowserStackAppiumSingleTest
     class MainClass
     {
 
-        readonly static string userName = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
-        readonly static string accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
+        readonly static string userName = "BROWSERSTACK_USERNAME";
+        readonly static string accessKey = "BROWSERSTACK_ACCESS_KEY";
 
 
         public static void Main(string[] args)
@@ -21,8 +21,6 @@ namespace BrowserStackAppiumSingleTest
             caps.SetCapability("browserstack.user", userName);
             caps.SetCapability("browserstack.key", accessKey);
 
-            caps.SetCapability("realMobile", true);
-            caps.SetCapability("automationName", "XCUITest");
             caps.SetCapability("device", "iPhone 7");
             caps.SetCapability("app", "bs://<hashed app-id>");
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement> (new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
@@ -45,10 +43,15 @@ namespace BrowserStackAppiumSingleTest
             String matchedString = "";
             foreach(IOSElement textElement in textElements)
             {
-                String textContent = textElement.Text;
-                if (textContent.Contains("not registered"))
-                {
-                    matchedString = textContent;
+                try {
+                    String textContent = textElement.Text;
+                    if (textContent.Contains("not registered"))
+                    {
+                        matchedString = textContent;
+                    }
+                }
+                catch (NullReferenceException) {
+                    continue;
                 }
             }
 
