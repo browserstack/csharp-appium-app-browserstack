@@ -25,37 +25,20 @@ namespace BrowserStackAppiumSingleTest
             caps.SetCapability("app", "bs://<hashed app-id>");
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement> (new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
-            IOSElement loginButton = (IOSElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Log In"))
+            IOSElement textButton = (IOSElement) new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Text Button"))
             );
-            loginButton.Click();
-            IOSElement emailTextField = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
-                ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Email address"))
+            textButton.Click();
+            IOSElement textInput = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Text Input"))
             );
-            emailTextField.SendKeys("hello@browserstack.com");
+            textInput.SendKeys("hello@browserstack.com");
 
-            driver.FindElementByAccessibilityId("Next").Click();
-            System.Threading.Thread.Sleep(5000);
+            IOSElement textOutput = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
+                ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("Text Output"))
+            );
 
-
-            IReadOnlyList<IOSElement> textElements = driver.FindElementsByXPath("//XCUIElementTypeStaticText");
-
-            String matchedString = "";
-            foreach(IOSElement textElement in textElements)
-            {
-                try {
-                    String textContent = textElement.Text;
-                    if (textContent.Contains("not registered"))
-                    {
-                        matchedString = textContent;
-                    }
-                }
-                catch (NullReferenceException) {
-                    continue;
-                }
-            }
-
-            Console.WriteLine(matchedString);
+            Assert.AreEqual(textOutput.Text,"hello@browserstack.com");
             driver.Quit();
         }
     }
