@@ -10,11 +10,6 @@ namespace BrowserStackAppiumSingleTest
 
     class MainClass
     {
-
-        readonly static string userName = "BROWSERSTACK_USERNAME";
-        readonly static string accessKey = "BROWSERSTACK_ACCESS_KEY";
-
-
         public static void Main(string[] args)
         {
             AppiumOptions options = new AppiumOptions();
