@@ -37,7 +37,7 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
+      <HintPath>..\packages\Selenium.WebDriver.3.10.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="WebDriver.Support">
@@ -45,6 +45,9 @@
     </Reference>
     <Reference Include="appium-dotnet-driver">
       <HintPath>..\packages\Appium.WebDriver.3.0.0.2\lib\net45\appium-dotnet-driver.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
