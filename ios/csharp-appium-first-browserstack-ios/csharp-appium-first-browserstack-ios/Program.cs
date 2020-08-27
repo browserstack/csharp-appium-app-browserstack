@@ -28,7 +28,7 @@ namespace csharp_appium_first_browserstack_ios
             options.AddAdditionalCapability("os_version", "13");
 
             // Specify the platformName
-            options.PlatformName = "Android";
+            options.PlatformName = "iOS";
 
             // Set other BrowserStack capabilities
             options.AddAdditionalCapability("project", "First CSharp project");
