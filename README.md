@@ -54,6 +54,8 @@ Open `Program.cs` file in the project `csharp-appium-first-test-browserstack` fo
 
 - Run the project
 
+- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
+
 For more details, refer to our documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/c-sharp)
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
