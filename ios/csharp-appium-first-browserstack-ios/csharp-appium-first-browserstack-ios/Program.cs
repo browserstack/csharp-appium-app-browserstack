@@ -1,6 +1,5 @@
 ﻿using System;
 using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;

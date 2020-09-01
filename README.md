@@ -10,18 +10,6 @@ This repository demonstrates how to run Appium CSharp tests on BrowserStack App 
 
     - If not installed, download and install Visual Studio 2019 from [here](https://visualstudio.microsoft.com/vs/)
 
-### Install the dependencies
-
-1. To install the dependencies
-
-    - For Android tests :  
-
-        -  Within `android` folder, open and build the Visual Studio project `csharp-appium-first-test-browserstack`
-
-    - For iOS tests :
-
-        - Within `ios` folder, open and build the Visual Studio project `csharp-appium-first-browserstack-ios`
-
 ## Getting Started
 
 Getting Started with Appium tests in CSharp on BrowserStack couldn't be easier!
@@ -42,7 +30,17 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 ### **Run first test :**
 
-Open `Program.cs` file in the project `csharp-appium-first-test-browserstack` for Android or `csharp-appium-first-browserstack-ios` for iOS
+-  For Android tests :
+
+    - Open and build the Visual Studio project `csharp-appium-first-test-browserstack` within `android` folder,
+ 
+ Or,
+
+-  For iOS tests :
+
+    - Open and build the Visual Studio project `csharp-appium-first-browserstack-ios` within `ios` folder
+    
+- Open `Program.cs` file in the opened project
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
