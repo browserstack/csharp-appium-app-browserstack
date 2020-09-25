@@ -12,8 +12,8 @@ namespace csharp_appium_local_test_browserstack
 {
     class Program
     {
-        readonly static string userName = "neerajkumar42";
-        readonly static string accessKey = "MXmmyxNzZTYmXyyA8xyB";
+        readonly static string userName = "YOUR_USERNAME";
+        readonly static string accessKey = "YOUR_ACCESS_KEY";
  
         static void Main(string[] args)
         {
@@ -26,7 +26,7 @@ namespace csharp_appium_local_test_browserstack
 
 
             // Set URL of the application under test
-            appiumOptions.AddAdditionalCapability("app", "bs://c1f5d3049ab29e0c96d04bcce8c19ab7d58b9f2c");
+            appiumOptions.AddAdditionalCapability("app", "bs://<app-id>");
 
             // Specify device and os_version
             appiumOptions.AddAdditionalCapability("device", "Google Pixel 3");
