@@ -30,7 +30,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android app](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk) or [sample iOS app](https://www.browserstack.com/app-automate/sample-apps/ios/BStackSampleApp.ipa).
 
-**2. Congigure and run your first test :**
+**2. Congigure and run your first test**
 
 -  For Android tests :
 
@@ -74,7 +74,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android Local app](https://www.browserstack.com/app-automate/sample-apps/android/LocalSample.apk) or [sample iOS Local app](https://www.browserstack.com/app-automate/sample-apps/ios/LocalSample.ipa).
 
-**2. Congigure and run your local test :**
+**2. Congigure and run your local test**
 
 -  For Android tests :
 
@@ -94,11 +94,20 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 - Set the device and OS version
 
+- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically starts and stops Local Testing connection using BrowserStack’s CSharp binding for BrowserStack Local. 
+
 - If you have uploaded your own app update the test case
 
 - Run the project
 
 - You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
+
+**Note**: If you are running Local test on Mac or GNU/Linux, you need to establish a Local Testing connection through your command-line interface by following the these steps:
+ 1. Download binary appropriate to your system: 
+    - [OS X (10.7 and above)](https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip)
+    - [Linux 32-bit](https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-ia32.zip)
+    - [Linux 64-bit](https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip)
+ 2. Run the binary using `./BrowserStackLocal --key <YOUR_ACCESS_KEY>`
 
 ## Integration with other CSharp frameworks
 
