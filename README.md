@@ -94,7 +94,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 - Set the device and OS version
 
-- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically starts and stops Local Testing connection using BrowserStack’s CSharp binding for BrowserStack Local. 
+- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using BrowserStack’s CSharp binding for BrowserStack Local. 
 
 - If you have uploaded your own app update the test case
 
@@ -102,7 +102,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 - You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
-**Note**: If you are running Local test on Mac or GNU/Linux, you need to establish a Local Testing connection through your command-line interface by following the these steps:
+**Note**: If you are running Local test on Mac or GNU/Linux, you need to establish Local Testing connection through your command-line interface by following the these steps:
  1. Download binary appropriate to your system: 
     - [OS X (10.7 and above)](https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip)
     - [Linux 32-bit](https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-ia32.zip)
