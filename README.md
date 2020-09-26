@@ -74,14 +74,14 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android Local app](https://www.browserstack.com/app-automate/sample-apps/android/LocalSample.apk) or [sample iOS Local app](https://www.browserstack.com/app-automate/sample-apps/ios/LocalSample.ipa).
 
-**2. Congigure and run your local test**
+**2. Configure and run your local test**
 
 -  For Android tests :
 
     - Open and build the Visual Studio project `csharp-appium-local-test-browserstack` within `android` folder,
  
  Or,
-
+ 
 -  For iOS tests :
 
     - Open and build the Visual Studio project `csharp-appium-local-browserstack-ios` within `ios` folder
@@ -94,7 +94,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 - Set the device and OS version
 
-- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using BrowserStack’s CSharp binding for BrowserStack Local. 
+- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using BrowserStack’s CSharp binding for BrowserStack Local.
 
 - If you have uploaded your own app update the test case
 
