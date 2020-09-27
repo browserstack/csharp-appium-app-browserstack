@@ -17,7 +17,7 @@ namespace csharp_appium_local_test_browserstack
  
         static void Main(string[] args)
         {
-            Local browserStackLocal;
+            Local browserStackLocal=null;
 
         AppiumOptions appiumOptions = new AppiumOptions();
             // Set your BrowserStack access credentials
@@ -47,7 +47,7 @@ namespace csharp_appium_local_test_browserstack
             // for Mac and GNU/Linux, run the local binary manually to enable local testing (see the docs)
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                     && appiumOptions.ToCapabilities().HasCapability("browserstack.local")
-                    && appiumOptions.ToCapabilities().HasCapability("browserstack.local").ToString() == "true")
+                    && appiumOptions.ToCapabilities().GetCapability("browserstack.local").ToString() == "true")
             {
                 browserStackLocal = new Local();
                 List<KeyValuePair<string, string>> bsLocalArgs = new List<KeyValuePair<string, string>>() {
@@ -62,7 +62,8 @@ namespace csharp_appium_local_test_browserstack
             AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
                     new Uri("http://hub-cloud.browserstack.com/wd/hub"), appiumOptions);
 
-
+            // Test case for the BrowserStack sample Android Local app.
+            // If you have uploaded your app, update the test case here.
             AndroidElement searchElement = (AndroidElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.Id("com.example.android.basicnetworking:id/test_action"))
             );
@@ -84,8 +85,15 @@ namespace csharp_appium_local_test_browserstack
             }
 
             Console.WriteLine(testElement.Text);
-
+            // Invoke driver.quit() after the test is done to indicate the test is completed.
             driver.Quit();
+
+            // Stop the BrowserStack Local Binary.
+            if(browserStackLocal != null)
+            {
+                browserStackLocal.stop();
+            }
+
         }
     }
 }

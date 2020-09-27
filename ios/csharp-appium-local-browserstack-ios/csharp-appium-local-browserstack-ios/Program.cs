@@ -17,7 +17,7 @@ namespace csharp_appium_local_browserstack_ios
         readonly static string accessKey = "YOUR_ACCESS_KEY";
         static void Main(string[] args)
         {
-            Local browserStackLocal;
+            Local browserStackLocal=null;
 
             AppiumOptions appiumOptions = new AppiumOptions();
             // Set your BrowserStack access credentials
@@ -49,7 +49,7 @@ namespace csharp_appium_local_browserstack_ios
             // for Mac and GNU/Linux, run the local binary manually to enable local testing (see the docs)
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                     && appiumOptions.ToCapabilities().HasCapability("browserstack.local")
-                    && appiumOptions.ToCapabilities().HasCapability("browserstack.local").ToString() == "true")
+                    && appiumOptions.ToCapabilities().GetCapability("browserstack.local").ToString() == "true")
             {
                 browserStackLocal = new Local();
                 List<KeyValuePair<string, string>> bsLocalArgs = new List<KeyValuePair<string, string>>() {
@@ -64,6 +64,7 @@ namespace csharp_appium_local_browserstack_ios
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new Uri("http://hub-cloud.browserstack.com/wd/hub"), appiumOptions);
 
             //Test case for sample iOS Local app.
+            // If you have uploaded your app, update the test case here.
             IOSElement testButton = (IOSElement)new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(
                 SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(MobileBy.AccessibilityId("TestBrowserStackLocal"))
             );
@@ -75,8 +76,14 @@ namespace csharp_appium_local_browserstack_ios
 
             Console.WriteLine(resultElement.Text);
 
+            //Invoke driver.quit() after the test is done to indicate that the test is completed.
             driver.Quit();
 
+            //Stop the BrowserStack Local binary
+            if (browserStackLocal != null)
+            {
+                browserStackLocal.stop();
+            }
 
         }
     }
