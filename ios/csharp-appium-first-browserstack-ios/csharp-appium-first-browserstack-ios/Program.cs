@@ -12,32 +12,32 @@ namespace csharp_appium_first_browserstack_ios
     {
         static void Main(string[] args)
         {
-            AppiumOptions options = new AppiumOptions();
-        
+            AppiumOptions caps = new AppiumOptions();
+
 
             // Set your BrowserStack access credentials
-            options.AddAdditionalCapability("browserstack.user", "YOUR_USERNAME");
-            options.AddAdditionalCapability("browserstack.key", "YOUR_ACCESS_KEY");
+            caps.AddAdditionalCapability("browserstack.user", "YOUR_USERNAME");
+            caps.AddAdditionalCapability("browserstack.key", "YOUR_ACCESS_KEY");
 
             // Set URL of the application under test
-            options.AddAdditionalCapability("app", "bs://<app-id>");
+            caps.AddAdditionalCapability("app", "bs://<app-id>");
 
             // Specify device and os_version
-            options.AddAdditionalCapability("device", "iPhone 11 Pro");
-            options.AddAdditionalCapability("os_version", "13");
+            caps.AddAdditionalCapability("device", "iPhone 11 Pro");
+            caps.AddAdditionalCapability("os_version", "13");
 
             // Specify the platformName
-            options.PlatformName = "iOS";
+            caps.PlatformName = "iOS";
 
             // Set other BrowserStack capabilities
-            options.AddAdditionalCapability("project", "First CSharp project");
-            options.AddAdditionalCapability("build", "CSharp iOS");
-            options.AddAdditionalCapability("name", "first_test");
+            caps.AddAdditionalCapability("project", "First CSharp project");
+            caps.AddAdditionalCapability("build", "CSharp iOS");
+            caps.AddAdditionalCapability("name", "first_test");
 
             // Initialize the remote Webdriver using BrowserStack remote URL
             // and desired capabilities defined above
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(
-                new Uri("http://hub-cloud.browserstack.com/wd/hub"), options);
+                new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
             // Test case for the BrowserStack sample iOS app. 
             // If you have uploaded your app, update the test case here.

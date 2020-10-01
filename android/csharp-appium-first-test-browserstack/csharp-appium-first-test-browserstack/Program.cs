@@ -11,32 +11,32 @@ namespace csharp_appium_first_test_browserstack
     {
         static void Main(string[] args)
         {
-            AppiumOptions options = new AppiumOptions();
+            AppiumOptions caps = new AppiumOptions();
 
             // Set your BrowserStack access credentials
-            options.AddAdditionalCapability("browserstack.user", "YOUR_USERNAME");
-            options.AddAdditionalCapability("browserstack.key", "YOUR_ACCESS_KEY");
+            caps.AddAdditionalCapability("browserstack.user", "YOUR_USERNAME");
+            caps.AddAdditionalCapability("browserstack.key", "YOUR_ACCESS_KEY");
 
             // Set URL of the application under test
-            options.AddAdditionalCapability("app", "bs://<app-id>");
+            caps.AddAdditionalCapability("app", "bs://<app-id>");
 
             // Specify device and os_version
-            options.AddAdditionalCapability("device", "Google Pixel 3");
-            options.AddAdditionalCapability("os_version", "9.0");
+            caps.AddAdditionalCapability("device", "Google Pixel 3");
+            caps.AddAdditionalCapability("os_version", "9.0");
 
             // Specify the platform name
-            options.PlatformName = "Android";
+            caps.PlatformName = "Android";
 
             // Set other BrowserStack capabilities
-            options.AddAdditionalCapability("project", "First CSharp project");
-            options.AddAdditionalCapability("build", "CSharp Android");
-            options.AddAdditionalCapability("name", "first_test");
+            caps.AddAdditionalCapability("project", "First CSharp project");
+            caps.AddAdditionalCapability("build", "CSharp Android");
+            caps.AddAdditionalCapability("name", "first_test");
 
 
             // Initialize the remote Webdriver using BrowserStack remote URL
             // and desired capabilities defined above
             AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
-                    new Uri("http://hub-cloud.browserstack.com/wd/hub"), options);
+                    new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
 
             // Test case for the BrowserStack sample Android app. 
             // If you have uploaded your app, update the test case here.
