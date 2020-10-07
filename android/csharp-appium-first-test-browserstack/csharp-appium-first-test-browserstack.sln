@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-appium-first-test-browserstack", "csharp-appium-first-test-browserstack\csharp-appium-first-test-browserstack.csproj", "{C6D50AAA-0D6A-4468-AE3F-0FE80ABA403F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6D50AAA-0D6A-4468-AE3F-0FE80ABA403F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D50AAA-0D6A-4468-AE3F-0FE80ABA403F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D50AAA-0D6A-4468-AE3F-0FE80ABA403F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D50AAA-0D6A-4468-AE3F-0FE80ABA403F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
