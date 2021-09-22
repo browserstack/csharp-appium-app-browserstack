@@ -29,7 +29,7 @@ namespace csharp_appium_first_test_browserstack
 
             // Set other BrowserStack capabilities
             caps.AddAdditionalCapability("project", "First CSharp project");
-            caps.AddAdditionalCapability("build", "CSharp Android");
+            caps.AddAdditionalCapability("build", "browserstack-build-1");
             caps.AddAdditionalCapability("name", "first_test");
 
 
