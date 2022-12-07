@@ -9,6 +9,7 @@ This repository demonstrates how to run Appium CSharp tests on BrowserStack App 
 1. Visual Studio 2019
 
     - If not installed, download and install Visual Studio 2019 from [here](https://visualstudio.microsoft.com/vs/)
+    - Install .net package during setup
 
 ## Getting Started
 
@@ -52,7 +53,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 - If you have uploaded your own app update the test case
 
-- Run the project
+- Run the project using `dotnet build && dotnet run Program.cs`
 
 - You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
