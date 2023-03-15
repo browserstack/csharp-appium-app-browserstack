@@ -1,4 +1,6 @@
-# nunit-appium-app-browserstack
+# csharp-appium-app-browserstack
+
+This repository demonstrates how to run Appium CSharp tests on BrowserStack App Automate.
 
 ## Setup
 
