@@ -39,7 +39,7 @@ namespace csharp_appium_local_test_browserstack
 
             // Set other BrowserStack capabilities
             appiumOptions.AddAdditionalCapability("project", "First CSharp project");
-            appiumOptions.AddAdditionalCapability("build", "CSharp Android local");
+            appiumOptions.AddAdditionalCapability("build", "browserstack-build-1");
             appiumOptions.AddAdditionalCapability("name", "local_test");
 
 

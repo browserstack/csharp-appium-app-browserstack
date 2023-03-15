@@ -40,7 +40,7 @@ namespace csharp_appium_local_browserstack_ios
 
             // Set other BrowserStack capabilities
             appiumOptions.AddAdditionalCapability("project", "First CSharp project");
-            appiumOptions.AddAdditionalCapability("build", "CSharp iOS local");
+            appiumOptions.AddAdditionalCapability("build", "browserstack-build-1");
             appiumOptions.AddAdditionalCapability("name", "local_test");
 
 

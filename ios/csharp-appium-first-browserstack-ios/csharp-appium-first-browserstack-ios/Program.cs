@@ -31,7 +31,7 @@ namespace csharp_appium_first_browserstack_ios
 
             // Set other BrowserStack capabilities
             caps.AddAdditionalCapability("project", "First CSharp project");
-            caps.AddAdditionalCapability("build", "CSharp iOS");
+            caps.AddAdditionalCapability("build", "browserstack-build-1");
             caps.AddAdditionalCapability("name", "first_test");
 
             // Initialize the remote Webdriver using BrowserStack remote URL
